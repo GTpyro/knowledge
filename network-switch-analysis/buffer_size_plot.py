@@ -4,9 +4,11 @@ import streamlit as st
 
 data_url = "https://github.com/GTpyro/knowledge/raw/refs/heads/main/network-switch-analysis/Network%20Switch%20Performance.xlsx"
 
+
 @st.cache_data
 def get_data(data_url: str) -> pd.DataFrame:
     return pd.read_excel(data_url)
+
 
 switch_metrics = get_data(data_url)
 switch_metrics["Total Port Count"] = (
