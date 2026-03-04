@@ -3,13 +3,14 @@ name = "network-switch-analysis"
 version = "0.1.0"
 description = "A review of commercially available network switches as of early 2026"
 readme = "README.md"
-requires-python = ">=3.9"
+requires-python = ">=3.14"
 dependencies = [
+    "great-tables>=0.20.0",
     "jupyter>=1.1.1",
+    "kaleido>=1.2.0",
     "numpy>=2.0.2",
     "openpyxl>=3.1.5",
     "pandas>=2.3.3",
     "plotly>=6.5.1",
-    "streamlit[charts]>=1.50.0",
-    "watchdog>=6.0.0",
+    "selenium>=4.36.0",
 ]

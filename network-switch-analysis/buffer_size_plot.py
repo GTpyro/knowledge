@@ -1,11 +1,11 @@
 import pandas as pd
 import plotly.express as px
-import streamlit as st
+# import streamlit as st
 
 data_url = "https://github.com/GTpyro/knowledge/raw/refs/heads/main/network-switch-analysis/Network%20Switch%20Performance.xlsx"
 
 
-@st.cache_data
+# @st.cache_data
 def get_data(data_url: str) -> pd.DataFrame:
     return pd.read_excel(data_url)
 
@@ -48,4 +48,5 @@ fig6 = px.scatter(
     log_x=True,
     log_y=True,
 )
-st.plotly_chart(fig6)
+fig6.write_html("network_switch_comparison.html")
+fig6.write_image("network_switch_comparison.png")
